@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/loop.css">
+  <title>モルちゃんと話す</title>
+</head>
+<body>
+  <button id="speakButton">モルちゃんと話す</button>
+  <img src="img/moruspeak.gif" onclick="img/moruspeak.gif" alt="モルちゃん">
+  <img class="rotation-2d" src="img/moruspeak.gif">
+  <img class="rotation-2d" src="img/moruspeak.gif">
+  <img class="rotation-2d" src="img/moruspeak.gif">
+  <img class="rotation-2d" src="img/moruspeak.gif">
+  <img class="rotation-2d" src="img/moruspeak.gif">
+  <img class="rotation-2d" src="img/moruspeak.gif">
+  <img class="rotation-2d" src="img/moruspeak.gif">
+  <img class="rotation-2d" src="img/moruspeak.gif">
+  <img class="rotation-2d" src="img/moruspeak.gif">
+  <img class="rotation-2d" src="img/moruspeak.gif">
+  <img class="rotation-2d" src="img/moruspeak.gif">
+  <script>
+    window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+    const synth = window.speechSynthesis;
+
+    function speakText(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      synth.speak(utterance);
+    }
+
+    document.getElementById('speakButton').addEventListener('click', () => {
+      const botReply = 'こんにちは!モルちゃんです！みなさんお元気ですか？モルちゃんはとっても元気です！！'; // ここにボットの応答を挿入
+      speakText(botReply);
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!-- let uttearnce = new SpeechSynthesisUtterance();
+uttearnce.text = 'こんにちわ!';
+   uttearnce.volume = 0.8;
+   uttearnce.rate = 1.2;
+   uttearnce.pitch = 1.7;
+   uttearnce.lang = 'ja-JP'
+   window.speechSynthesis.speak(uttearnce); -->

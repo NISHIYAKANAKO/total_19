@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1080px;
+  margin: auto;
+}
+
+section {
+  text-align: center;
+  margin: 50px;
+}
+button {
+  font-size: 90%;
+  margin-right: 20px;
+  color: #1a0032;
+  padding: 5px 10px;
+  background: #eee;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#buttons{
+margin-top: 30px;
+
+}
+
+#buttons button:last-child {
+  margin-right: 0;
+}
+
+ul {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  padding: 10px;
+}
+
+.accordion-item{
+margin-bottom: 16px;
+}
+
+.shipping_tittle {
+  background-color: #9ff;
+}
+.shipping_text {
+padding: 10px;
+border-bottom: 2px solid #9ff;
+border-left: 2px solid #9ff;
+border-right: 2px solid #9ff;
+}
+
+.payment_tittle {
+  background-color: #f9f;
+}
+.payment_text{
+padding: 10px;
+border-bottom: 2px solid #f9f;
+border-left: 2px solid #f9f;
+border-right: 2px solid #f9f;
+}
+.merchandise_tittle {
+    background-color: #f90;
+  }
+.merchandise_text{
+  padding: 10px;
+  border-bottom: 2px solid #f90;
+  border-left: 2px solid #f90;
+  border-right: 2px solid #f90;
+  }
+
+.order_tittle {
+    background-color: #ff9;
+  }
+.order_text{
+  padding: 10px;
+  border-bottom: 2px solid #ff9;
+  border-left: 2px solid #ff9;
+  border-right: 2px solid #ff9;
+  }
+.moru_tittle {
+    background-color: #caf;
+  }
+.moru_text{
+  padding: 10px;
+  border-bottom: 2px solid #caf;
+  border-left: 2px solid #caf;
+  border-right: 2px solid #caf;
+  }
+
+.accordion {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    max-width: 300px;
+    position: relative;
+    width: 100%;
+  }
+
+  /* コンテンツボックスの枠線 */
+
+  /* 矢印 */
+  .accordion-title {
+    position: relative;
+  }
+  .accordion-title::after {
+    border-right: solid 2px #ccc;
+    border-top: solid 2px #CCC;
+    content: "";
+    display: block;
+    height: 8px;
+    position: absolute;
+    right: 25px;
+    top: 38%;
+    transform: rotate(135deg);
+    transition: transform .3s ease-in-out, top .3s ease-in-out;
+    width: 8px;
+  }
+  .accordion-title.open::after {
+    top: 45%;
+    transform: rotate(-45deg);
+  }
+
+  .accordion {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	max-width: 450px;
+	position: relative;
+	width: 100%;
+  }
+  .accordion-title {
+	color: #000;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 10px 20px;
+  }
+  .accordion-content {
+	display: none;
+	padding: 10px 20px;
+  }
+  .accordion-content p {
+	font-size: 16px;
+	line-height: 1.5;
+    text-align: left;
+  }
+
+.moru img{
+    margin: 2px 100px;
+}
+
+.ta_right{
+text-align: right;
+text-decoration: none;
+color: #707070;
+font-size: 70%;
+margin-top: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 30px 0;
+  background-color: #707070;
+  color: #fff;
+}

@@ -1,0 +1,780 @@
+html{
+  font-size:100%; /*ユーザー設定の文字サイズを正しく反映*/
+}
+*{
+  box-sizing:border-box; /*余白や線を幅や高さに含める*/
+}
+
+  body{
+    font-size:16px;
+  }
+
+  /*bgの色変化*/
+  /* @keyframes bgchange{
+        0%   {background:#ffffff;}
+        25%  {background:#fffbed;}
+        50%  {background:#fff8de;}
+        75%  {background:#fff7d0;}
+        90%  {background:#fff9e3;}
+        100% {background:#ffffff;}
+   } */
+
+  .content {
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+/* ナビを常に上部に固定 */
+header{
+    width:100%;
+    background-color: #fff;
+    box-shadow:0 2px 8px rgba(30,30,80,.3);
+    line-height:1;
+    position:fixed;
+    justify-content: space-between;
+    z-index:10;
+    top: 0px;
+    left:0;
+}
+
+/* ロゴ */
+header img{
+  width: 30%;
+  height:auto;
+  padding: 0;
+  margin:10px 30px 0 ;
+  display: block;
+}
+
+
+/* ナビゲーション */
+.gnavi{
+  text-align: right;
+  display: flex;
+  flex-wrap: wrap;/*スマホ表示折り返し用なのでPCのみなら不要*/
+  margin-left: 45%;
+  list-style: none;
+  font-size: 1.4vw;
+}
+
+.gnavi li a{
+  display: block;
+  padding:10px 30px;
+  text-decoration: none;
+  color: #333;
+}
+
+.gnavi li{
+  margin-bottom:20px;
+}
+
+/*===================
+上下に線が伸びて背景になる
+====================*/
+
+.gnavi li a{
+  /*線の基点とするためrelativeを指定*/
+position: relative;
+  /*はみ出る要素を隠す*/
+overflow: hidden;
+  /*アニメーションの指定*/
+transition: all .2s;
+}
+
+/*現在地とhoverの設定*/
+.gnavi li.current a,
+.gnavi li a:hover{
+  /*背景色をつける*/
+  background: #ffd61a;
+color:#fff;
+}
+
+/*背景がつくのアニメーションの開始を0.5秒遅らせる*/
+.gnavi li a:hover{
+transition-delay: .5s;
+}
+
+/*線の設定*/
+.gnavi li a:before,
+.gnavi li a:after {
+  content: "";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  left: 0;
+  /*線の形状*/
+  height: 2px;
+  width:100%;
+  background: #ffd61a;
+  /*アニメーションの指定*/
+transition: all .5s;
+}
+
+/*線の位置と変化*/
+.gnavi li a::before {
+  top: 0;
+transform: translateX(-100%);/*X方向に-100%移動*/
+}
+.gnavi li a::after {
+  bottom: 0;
+transform: translateX(100%);/*X方向に100%移動*/
+}
+
+/*hoverした際の線の変化*/
+.gnavi li a:hover::before ,
+.gnavi li a:hover::after {
+transform: translateX(0);/*X方向に0%移動*/
+}
+/*========= レイアウトのためのCSS ===============*/
+
+/* nav ul{
+    text-align: right;
+    transform: translate(-5%, -280%);
+    font-size: 21px;
+  }
+
+nav ul li{
+    list-style: none;
+    display: inline;
+  }
+
+nav ul li:not(:first-child){
+margin-left: 50px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    }
+
+nav ul li a:hover{
+    color: #ffd61a;
+    transform: rotateX(360deg);
+    } */
+
+/* MV上の文字指定 */
+
+#main-visual{
+    color: #fff;
+    position:relative;
+    z-index: 1;
+}
+.mv-title{
+  font-size:36px;
+  margin-bottom: 50px;
+  text-shadow: 1px 2px 3px #505050;
+}
+.mv-subtitle{
+  font-size:22px;
+  text-shadow: 1px 2px 3px #262626;
+}
+
+/* MVの画像幅 */
+    #main-visual img {
+    width: 100%;
+    right:0;
+}
+
+/* MV上の文字の場所指定 */
+h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(100%,100%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+h2{
+ font-size:24px;
+ color: #ffd61a;
+ margin-top: 15%;
+ margin-bottom: 30px;
+ text-align: center;
+}
+
+h3{
+font-size: 16px;
+margin-bottom: 60px;
+text-align: center;
+}
+
+.text-center{
+    text-align: center;
+    }
+
+#about,#course,#content,#news p{
+line-height: 1.75;
+margin-bottom: 80px;
+}
+
+/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+/* .course-wrap,.access-wrap{
+  animation: bgchange 20s ease infinite;
+} */
+
+span{
+  margin:40px 0;
+  display: block;
+}
+
+#about-visual{
+  display: flex;
+  overflow: hidden;
+}
+
+.loop_box {
+  display: flex;
+  animation: loop-list 40s linear infinite;
+}
+
+@keyframes loop-list {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+#about-visual img{
+  height:auto;
+  margin-top:10%;
+}
+
+#about-visual{
+  font-size: 0;
+}
+
+span{
+  margin:40px 0;
+  display: block;
+}
+
+#course .course-text{
+margin-bottom: 60px;
+}
+
+.course-field {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-field img{
+width: 50%;
+}
+
+.course-title{
+font-weight: bold;
+font-size: 21px;
+}
+
+#course dl{
+padding: 0 50px;
+}
+
+#course dt{
+padding-bottom: 40px;
+}
+
+.news-wrap{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.news-field{
+width: 300px;
+  }
+
+.news-field:not(:first-child){
+margin-left: 30px;
+}
+
+.news-field img{
+margin-bottom: 30px;
+}
+
+.news-field img:hover {
+opacity: 0.5 ;
+}
+
+.news-field p{
+  margin-top: 24px;
+}
+
+.access-wrap{
+  margin:0 auto;
+  height: auto;
+  object-fit: cover;
+}
+iframe {
+  width: 100%;
+  aspect-ratio: 8/3;
+}
+
+#access dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+#access dt {
+  width: 45%;
+  padding-left: 300px;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+#access dd {
+  width: 55%;
+  padding: 20px;
+  margin: 0 0 10px 0;
+}
+
+#contact p{
+  text-align: center;
+  }
+
+#contact .small{
+margin: 30px 0 70px;
+}
+
+::placeholder{
+  color: #a8a8a8;
+}
+
+.form-wrap{
+  width: 640px;
+  margin:0 auto;
+}
+
+#form dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+#form dt {
+  width: 45%;
+  display: flex;
+  justify-content: left;
+  border-right: 1px #bfbfbf solid;
+  border-top: 1px #bfbfbf solid;
+}
+
+#form dt label{
+position: relative;
+width: 160px;
+height: 50px;
+position:relative;
+top: 25px;
+left:60px;
+}
+
+#form dd {
+  width: 55%;
+  padding: 20px;
+  margin: 0;
+  border-top: 1px #bfbfbf solid;
+}
+#form dl{
+border-bottom: 1px #bfbfbf solid;
+}
+input,select {
+  height: 36px;
+  width: 328px;
+}
+
+.checkbox input{
+  inline-size: 16px;
+  block-size: 16px;
+  border-radius: 5px;
+}
+
+.checkbox {
+font-size: 12px;
+}
+.checkbox input{
+margin-right: 10px;
+font-size: 75%;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color:#ffeb91;
+  vertical-align: -7px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+input[type="checkbox"]:checked:before {
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  transform: rotate(50deg);
+  width: 4px;
+  height: 8px;
+  border-right: 2px solid #ff90ee;
+  border-bottom: 2px solid #ff90ee;
+  content: '';
+}
+
+.checkbox p{
+  padding: 2px 10px 24px 10px;
+}
+
+button {
+    width: 300px;
+    padding: 1em 2em;
+    border: none;
+    display: inline-block;
+    background-color: #ffd61a;
+    box-shadow: 0 6px #ffbb1c;
+    line-height: 1;
+    color: #fff;
+    cursor : pointer;
+  }
+
+button:hover{
+  background-color: #fffbca;
+  color: #ffbb1c;
+  transform: rotateX(360deg);
+  }
+
+  button {
+    border-radius: 2px;
+    box-shadow: 0 6px #ffbb1c;
+    position:relative;
+    top:-20px;
+  }
+
+  button:active {
+    box-shadow: 0 0 #ffbb1c;
+    top: 6px;
+  }
+
+  .essential {
+    background: #c10811;
+    color: #fafafa;
+    font-size: 12px;
+    padding: 5px;
+    font-weight: normal;
+    margin-left: 5px;
+    width: 36px;
+    height: 22px;
+    position:relative;
+    top: -58px;
+    left:150px;}
+
+/* 入力エラーのスタイル */
+input[type=text]:required,
+input[type=email]:required,
+input[type=email]:invalid,
+textarea:required {
+	color: #630015;
+}
+
+/* 入力値が正常な時のスタイル */
+input[type=text]:valid,
+input[type=email]:valid,
+textarea:valid {
+	color: #333;
+	border-color: #ccc;
+	background: #fff;
+}
+
+.error-message {
+  font-size: 12px;
+  color: #ff7676;
+  display: none; /* 非表示に */
+}
+/* :invalid時だけ隣の要素を表示 */
+input:invalid + .error-message  {
+  display: block;
+}
+
+  footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+    padding: 30px 0;
+    background-color: #707070;
+    color: #fff;
+  }
+
+/**********アニメーション設定**********/
+
+@keyframes RightToLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  }
+
+  @keyframes LeftToRight {
+  0% {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  }
+@keyframes SlideDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  }
+@keyframes SlideUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  }
+
+@keyframes ScrollAnim {
+    from { width: 50%; }
+    to { width: 100%; }
+  }
+
+  /**********アニメーション設定end**********/
+header picture{
+  animation-name: SlideUp;
+  animation-duration: 4s;
+}
+
+.mv-title,.mv-subtitle {
+    animation-name: SlideDown;
+    animation-duration: 4s;
+    }
+
+h3,nav{
+    animation-name: LeftToRight;
+    animation-duration: 4s;
+    }
+
+h2{
+      animation-name: RightToLeft;
+      animation-duration: 4s;
+      }
+
+/* ボタン共通設定 */
+.f-btn{
+  /*矢印の基点とするためrelativeを指定*/
+position: relative;
+  /*ボタンの形状*/
+display: inline-block;
+background:#ffc940;
+color:#fff;
+  padding: 10px 30px 10px 40px;
+border-radius:25px;
+  text-align: center;
+  outline: none;
+  /*アニメーションの指定*/
+  transition: ease .2s;
+}
+
+.top a{
+  text-decoration: none;
+}
+
+.f-btn:hover{
+background:#ffb834;
+color: #fff;
+}
+
+.btnarrow1::after{
+      content: '';
+        /*絶対配置で矢印の位置を決める*/
+      position: absolute;
+        top:42%;
+        left: 28px;
+        /*矢印の形状*/
+        width: 5px;
+        height: 5px;
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+        transform: rotate(-45deg);
+        /*アニメーションの指定*/
+        transition: all .3s;
+}
+
+    /*hoverした際の移動*/
+    .btnarrow1:hover::after{
+        left: 20px;
+}
+
+.top{
+font-weight: bold;
+position: relative;
+top: 10px;
+left:650px;
+}
+
+.shop-wrap{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.shop-field{
+width: 396px;
+}
+
+.shop-field:not(:first-child){
+margin-left: 30px;
+}
+
+.shop-field img{
+margin-bottom: 30px;
+}
+
+.shop-field img:hover {
+opacity: 0.5 ;
+}
+
+.shop-field p{
+  margin-top: 24px;
+}
+
+.sliderArea {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.sliderArea.w300 {
+  max-width: 300px;
+}
+
+.slick-slide {
+  margin: 0 5px;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #000;
+}
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+.slick-current {
+  opacity: 1;
+}
+
+.thumb {
+  margin: 20px 0 0;
+}
+
+.thumb .slick-slide {
+  cursor: pointer;
+}
+
+.thumb .slick-slide:hover {
+  opacity: .7;
+}
+
+#form h1{
+  width: 20%;
+  height:40px;
+  padding: 0;
+  margin:20px 30px 0 72px;
+  display: block;
+  }
+
+.line-h{
+    position:relative;
+    top: 30px;
+    left:0px;
+  }
+
+.line-h p{
+    line-height: 1.75;
+  }
+
+  .container {
+    background-color: #fff;
+    display: grid;
+    width: 1280px;
+    height: 800px;
+}
+
+.item_slid {
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+}
+
+.slider-list {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+    animation: slideShow 30s infinite linear;
+    list-style: none;
+}
+
+.slider-item {
+    width: 1280px;
+    height: 800px;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+
+@keyframes slideShow {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.rotation-2d{
+  animation: 3s rotate-2d linear infinite;
+}
+@keyframes rotate-2d{
+  0% {transform: rotate(0);}
+  100% {transform: rotate(360deg);}
+}

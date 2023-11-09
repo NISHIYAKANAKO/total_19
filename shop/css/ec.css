@@ -1,0 +1,64 @@
+.wrap{
+padding: 20px;
+}
+
+#cheesebot{
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    z-index: 3000;
+  }
+
+  /* 画像 - 絶対配置で左上に配置 */
+   .icon{
+    position: absolute;
+    display: inline;
+    top: 0;
+  }
+
+del{
+    text-decoration: none;
+  }
+
+.m-b{
+margin-top: 10px;
+margin-bottom: 20px;
+
+}
+
+ul{
+  display: flex;
+  padding: 12px;
+  margin-top: 5px;
+  }
+
+li{
+margin: 10px;
+padding: 10px;
+border: 2px solid #fff;
+background-color: #fff;
+color: #ffbb1c;
+width: 200px;
+  }
+
+li a{
+text-decoration: none;
+font-weight:bold;
+}
+
+li:hover{
+  background: #ffbb1c;
+  color:#fff;
+}
+
+/* ボタンの設定 */
+#text-button {
+    display: block;
+    cursor: pointer;
+    width: 80px;
+    margin-top: 5px;
+    text-align: center;
+    border: 1px solid #232323;
+  }
+

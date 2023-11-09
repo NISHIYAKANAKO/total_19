@@ -1,0 +1,38 @@
+.container {
+    width: 1280px;
+    height: 800px;
+}
+.container{
+    display: flex;
+}
+
+.slider-list {
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+    animation: slideShow 30s infinite linear;
+    list-style: none;
+}
+
+.s-item {
+    width: 400px;
+    height: 400px;
+}
+
+.s-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 5rem;
+}
+
+@keyframes slideShow {
+    0% {
+        transform: translatex(0%);
+    }
+
+    100% {
+        transform: translatex(100%);
+    }
+
+}

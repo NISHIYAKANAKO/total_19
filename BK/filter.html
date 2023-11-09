@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cheese ACADEMY TOKYO</title>
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/filter.css">
+    <script src="js/jquery-2.1.3.min.js"></script>
+</head>
+
+<body class="content">
+    <!-- ヘッダー -->
+    <header class="global-header">
+    </header>
+
+    <section>
+    <div id="cheesebot" class="type_text">
+            <div class="moru"><img src="./img/cao.png" alt="チーズbotモルちゃん"></div>
+            質問のジャンルを選ぶと見つかりやすいよ。
+    </div>
+
+        <div id="buttons">
+            <button value="all">All</button>
+            <button value="order">注文について</button>
+            <button value="shipping">発送について</button>
+            <button value="payment">お支払いについて</button>
+            <button value="merchandise">商品について</button>
+        </div>
+
+
+
+        <ul id="list">
+            <div class="accordion">
+                <div class="accordion-container">
+
+                    <!-- order -->
+                    <div class="accordion-item"><!-- ここのclassを変更 -->
+                        <li class="shipping_tittle accordion-title js-accordion-title shipping">
+                            注文してから何日で発送されるの？
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content shipping_text">
+                            <p>土・日・祝とその前日の午前0時以降のご注文は、<br>
+                                <span style="color:#B40000">翌営業日</span>に発送し、
+                                お届けまでは3日前後いただいております。<br>
+                                <span style="font-size : smaller">※北海道、沖縄、離島など一部地域については配送にお時間がかかる場合がありますので、
+                                    ご了承ください。<br>
+                                    ※年末年始・ゴールデンウィーク、悪天候、交通事故、繁忙期、ご注文内容の不備などの場合、
+                                    お届けが遅れることがございます。</span>
+                            </p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのclassを変更 -->
+                        <li class="shipping_tittle accordion-title js-accordion-title shipping">
+                            注文した商品はどこから送られて来るの？
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content shipping_text">
+                            <p>Cheese ACADEMY TOKYOの事務局<br><span style="font-size : smaller">（〒107-0061東京都港区北青山3-5-6
+                                    青朋ビル2F）</span><br>
+                                にて梱包し、ヤマト運輸 青山営業所経由にて、発送いたしております。
+                            </p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのclassを変更 -->
+                        <li class="order_tittle accordion-title js-accordion-title order">
+                            同時に注文しても別日に届けてくれる？
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content order_text">
+                            <p>商品ごとにお届け希望日を分けたい場合は、商品をカートに入れた後に設定できますのでご確認ください。<br>
+                                また、【冷凍品】と【常温品】は同じお日にちを設定いただいても別々で届きます場合がございますので、<br>
+                                あらかじめご了承くださいますようお願いいたします。</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="payment_tittle accordion-title js-accordion-title payment">
+                            クレジットカードの決済ができないよ
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content payment_text">
+                            <p>以下の可能性が考えられますので、ご確認ください。<br>
+                                ・番号や有効期限の入力間違い<br>
+                                ・有効期限の月と年を逆に入力している<br>
+                                ・番号を全角文字で入力している <span style="font-size : smaller">※半角で入力してください</span><br>
+                                ・カードの記載通りの名前で入力していない <br>
+                                ・入力を一定数誤ったため、一時的にロックがかかる <br>
+                                <span style="font-size : smaller">→お時間をあけて再度ご決済なされるか、「<a
+                                        href="index.html#contact"><u><span
+                                                style="color:#B40000">お問い合わせ</span></u></a>」のフォームよりご連絡ください。</span><br>
+                                ・何らかの事情により、お客さまのクレジットカードがご利用いただけない状態にある<br>
+                                <span style="font-size : smaller">→弊社では詳細が分かりかねます。ご契約のクレジットカード会社へ直接お問い合わせください。</span>
+                            </p><br>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item">
+                        <li class="shipping_tittle accordion-title js-accordion-title shipping">
+                            どんな状態で発送されるの？
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content shipping_text">
+                            <p>冷蔵の品は白いお箱の中に商品と一緒に保冷剤を添付いたしております。<br>
+                                常温のお品は茶色いお箱の中に梱包致しております。<br>
+                                また、割れやすいものや柔らかいものにつきましては緩衝材に包んでおります。
+                                詳しくご確認されたい場合は、<a href="index.html#contact">問い合わせフォーム</a>よりお問い合わせください。
+                            </p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="moru_tittle accordion-title js-accordion-title moru">
+                            モルちゃんとは？
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content moru_text">
+                            <p>チーズアカデミーのご案内が得意なチーズが大好きな女の子だよ。<br>
+                                特技はサッカー！ポジションはゴールキーパーなんだ。</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="moru_tittle accordion-title js-accordion-title moru">
+                            モルちゃんの身体はどうなってるの？
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content moru_text">
+                            <p class="moru">モルちゃんだよ。<br>
+                                モルちゃんは人間の体にモルモットの頭がついている普通の女の子だよ。<br>
+                                モルちゃんのことを聞いてくれたあなたには、このスーツの胸元を開いて人間の体とモルモットの頭のちょうど栄え目を見せてあげようね。
+                                <img src="./img/moruchan.png" onmouseover="this.src='./img/morumoru.png'"
+                                    onmouseout="this.src='./img/moruchan.png'" alt="モルちゃんの胸元アップ" width="200px" />
+                            </p>
+
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのclassを変更 -->
+                        <li class="order_tittle accordion-title js-accordion-title order">
+                            注文関連の質問のサンプルです。
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content order_text">
+                            <p>ああああああああああああああああああああああああああ</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+
+                    <div class="accordion-item"><!-- ここのclassを変更 -->
+                        <li class="shipping_tittle accordion-title js-accordion-title shipping">
+                            発送についての質問のサンプルです。
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content shipping_text">
+                            <img src="./img/about_01.jpg">
+                            <p>ああああああああああテキストテキストああああああああああテキストテキストああああああああああテキストテキストああああああああああテキストテキストああああああああああテキストテキスト
+                            </p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="payment_tittle accordion-title js-accordion-title payment">
+                            支払い関連の質問をここに入れますよーー５
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content payment_text">
+                            <p>ああああああああああああテキストああああああテキストあああああああああテキストテキストテキスト</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="merchandise_tittle accordion-title js-accordion-title merchandise">
+                            保管方法について教えてね
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content merchandise_text">
+                            <p>ああああああああああああテキストああああああテキストあああああああああテキストテキストテキスト</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="merchandise_tittle accordion-title js-accordion-title merchandise">
+                            アレルギー表示を見たいな
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content merchandise_text">
+                            <p>ああああああああああああテキストああああああテキストあああああああああテキストテキストテキスト</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="merchandise_tittle accordion-title js-accordion-title merchandise">
+                            賞味期限について教えてね
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content merchandise_text">
+                            <p>ああああああああああああテキストああああああテキストあああああああああテキストテキストテキスト</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="order_tittle accordion-title js-accordion-title order">
+                            注文関連４
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content order_text">
+                            <p>ああああああああああああああああああああああああああ</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="order_tittle accordion-title js-accordion-title order">
+                            注文関連５
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content order_text">
+                            <p>ああああああああああああああああああああああああああ</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="payment_tittle accordion-title js-accordion-title payment">
+                            お支払い方法は？
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content">
+                            <p>ああああああああああああテキストああああああテキストあああああああああテキストテキストテキスト</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="payment_tittle accordion-title js-accordion-title payment">
+                            代引きは使えるの？
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content payment_text">
+                            <p>ああああああああああああテキストああああああテキストあああああああああテキストテキストテキスト</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="payment_tittle accordion-title js-accordion-title payment">
+                            支払い関連の質問をここに入れますよーー４
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content payment_text">
+                            <p>ああああああああああああテキストああああああテキストあああああああああテキストテキストテキスト</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="merchandise_tittle accordion-title js-accordion-title merchandise">
+                            商品関連の質問４
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content merchandise_text">
+                            <p>ああああああああああああテキストああああああテキストあああああああああテキストテキストテキスト</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                    <div class="accordion-item"><!-- ここのidを変更 -->
+                        <li class="merchandise_tittle accordion-title js-accordion-title merchandise">
+                            商品関連の質問５
+                        </li><!--/.accordion-title-->
+                        <div class="accordion-content merchandise_text">
+                            <p>ああああああああああああテキストああああああテキストあああああああああテキストテキストテキスト</p>
+                        </div><!--/.accordion-content-->
+                    </div><!-- /.accordion-item -->
+
+                </div><!-- /.accordion-container -->
+            </div><!-- .accordion -->
+        </ul>
+
+<div class="ta_right"><a href="shop.html">オンラインショップに戻る</a></div>
+<footer>copyrights 2016 Cheeese Academy Tokyo All RIghts Reserved.</footer>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="js/filter.js"></script>
+        <script type="text/javascript" src="js/t.js"></script>
+
+        <script>
+            $(function(){
+            $(".type_text").t({
+            speed : 70,speed_vary : false,mistype:8
+             })
+             });
+            </script>
+    </section>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>テキスト読み上げ</title>
+</head>
+<body>
+  <button id="speakButton">モルちゃんと話す</button>
+  <script>
+    window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+    const synth = window.speechSynthesis;
+
+    function speakText(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      synth.speak(utterance);
+    }
+
+    document.getElementById('speakButton').addEventListener('click', () => {
+      const botReply = 'こんにちは'; // ここにボットの応答を挿入
+      speakText(botReply);
+    });
+  </script>
+</body>
+</html>

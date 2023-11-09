@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheese ACADEMY TOKYO || Access</title>
+    <link rel="icon" href="img/moruspeak.gif">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<header class="global-header">
+    <picture>
+      <source srcset="img/logo.png" alt="cheese ACADEMY TOKYO" media="(min-width: 768px)">
+      <img src="img/logo_sp.png" alt="cheese ACADEMY TOKYO">
+    </picture>
+
+    <!-- ナビゲーション -->
+    <nav>
+      <ul class="gnavi">
+        <li><a href="/index.html">About</a></li>
+        <li><a href="/course.html">Course</a></li>
+        <li><a href="/news.html">NEWS</a></li>
+        <li class="current"><a href="#">Contact</a></li>
+        <li><a href="shop/index.html">Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+<body>
+    <section id="contact" class="wrapper">
+        <h2>Contact</h2>
+        <h3>説明会お申し込み・お問い合わせ</h3>
+  
+        <p>ぜひ1度、足を運んでみませんか。説明会は随時開催中。</p>
+        <p>その他、お問い合わせもお気軽にどうぞ。お待ちしております。</p>
+  
+        <p class="small">&#8251;チーズアカデミーは実際には存在しません。<br>
+          間違っても問い合わせしないようお願いいたします。</p>
+      </section>
+  
+      <section id="form">
+        <form> <!-- <form action="form.html" method="post"> -->
+          <dl class="form-wrap">
+            <dt class="form-title">
+              <label for="name">名前<span class="essential">必須</span></label>
+            </dt>
+            <dd>
+              <input type="text" name="name" id="name" placeholder="地伊豆 太郎" required>
+            </dd>
+
+            <dt class="form-title">
+              <label for="kana">カナ</label>
+            </dt>
+            <dd>
+              <input type="text" name="kana" id="kana" placeholder="チイズ タロウ">
+            </dd>
+            <dt class="form-title">
+              <label for="mail">メールアドレス<span class="essential" required>必須</span></label>
+            </dt>
+            <dd>
+              <input type="email" name="email" autocomplete="email" placeholder="cheese@sample.com">
+              <p class="error-message">※ 入力内容をご確認ください</p>
+            </dd>
+            <dt class="form-title"><label for="form-chance">チーズアカデミーを知ったきっかけ</label>
+            </dt>
+            <dd>
+              <select>
+                <option hidden>選択してください</option>
+                <option>google検索</option>
+                <option>SNS</option>
+                <option>紹介</option>
+                <option>たまたま通りかかった</option>
+                <option>その他</option>
+              </select>
+            </dd>
+            <dt class="form-title"><label for="reason">志望動機選択肢</label></dt>
+            <dd class="checkbox">
+              <ul>
+                <li><label><input type="checkbox" name="start">起業をしたい</label></li>
+                <li><label><input type="checkbox" name="work">チーズ系企業に就職・転職したい</label></li>
+                <li><label><input type="checkbox" name="revive">チーズと関わる仕事をしており、仕事に生かしたい</label></li>
+                <li><label><input type="checkbox" name="culture">チーズの教養を身につけたい</label></li>
+              </ul>
+            </dd>
+            <dt class="form-title"><label for="detail">詳細</label></dt>
+            <dd>
+              <textarea name="message" cols="41" rows="4"></textarea>
+            </dd>
+          </dl>
+          <h2>
+            <button onclick="window.open('./form.html')">送信する</button>
+          </h2>
+        </form>
+
+      
+      </section>
+
+      <footer>copyrights 2016 Cheese Academy Tokyo All RIghts Reserved.</footer>
+
+</body>
+</html>

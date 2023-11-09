@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheese ACADEMY TOKYO || ONLINE SHOP</title>
+    <link rel="icon" href="img/moruspeak.gif">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/loop2.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <header class="global-header">
+    <picture>
+      <source srcset="img/logo.png" alt="cheese ACADEMY TOKYO" media="(min-width: 768px)">
+      <img src="img/logo_sp.png" alt="cheese ACADEMY TOKYO">
+    </picture>
+
+    <!-- ナビゲーション -->
+    <nav>
+      <ul class="gnavi">
+        <li><a href="/index.html">About</a></li>
+        <li><a href="/course.html">Course</a></li>
+        <li><a href="/news.html">NEWS</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li class="current"><a href="#">Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<body>
+<section class="recommend">
+<p class="bound">
+    <span>R</span><span>E</span><span>C</span><span>O</span><span>M</span><span>M</span><span>E</span><span>N</span><span>D</span>
+</p>
+</section>
+
+<form name="cheese" id="item" class="bside slideItem">
+<div class="container">
+<div id="slider" class="item_zoom">
+<div class="item_slid">
+    <div class="slider-list">
+        <div class="s-item">
+            <ul>
+            <li><img id ="ti-mori" src="img/item1.png" alt="チーズ盛り合わせ"></li>
+            <li class="itemName">チーズ盛り合わせ</li>
+            <li class="price">¥2,200<span>(税込)</span></li>
+            <li class="qty">
+            <select name="item1" onchange="calc()">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            </select>
+            </li>
+            </ul>
+        </div>
+        <div class="s-item">
+            <ul><li><img src="img/item2.png" alt=""></li>
+            <li class="itemName">チーズ盛り合わせ</li>
+            <li class="price">¥2,200<span>(税込)</span></li>
+            <li class="qty">
+            <select name="item2" onchange="calc()">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            </select>
+            </li></ul>
+        </div>
+        <div class="s-item">
+            <ul>
+            <li><img id src="img/item7.png" alt=""></li>
+            <li class="itemName">チーズ盛り合わせ</li>
+            <li class="price">¥2,200<span>(税込)</span></li>
+            <li class="qty">
+            <select name="item7" onchange="calc()">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            </select>
+            </li>
+            </ul>
+        </div>
+        <div class="s-item">
+            <ul>
+            <li><img id src="img/item9.png" alt=""></li>
+            <li class="itemName">チーズ盛り合わせ</li>
+            <li class="price">¥2,200<span>(税込)</span></li>
+            <li class="qty">
+            <select name="item9" onchange="calc()">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            </select>
+            </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</form>
+
+<script>
+    function calc(){
+    var item1= document.cheese.item1.selectedIndex*2100;
+    var item2= document.cheese.item2.selectedIndex*2200;
+    var item3= document.cheese.item3.selectedIndex*2300;
+    var item4= document.cheese.item4.selectedIndex*2400;
+    var item5= document.cheese.item5.selectedIndex*2500;
+    var item6= document.cheese.item6.selectedIndex*2600;
+    var item7= document.cheese.item7.selectedIndex*2700;
+    var item8= document.cheese.item8.selectedIndex*2800;
+    var item9= document.cheese.item9.selectedIndex*2900;
+    var item10= document.cheese.item10.selectedIndex*3000;
+    var item11= document.cheese.item11.selectedIndex*3100;
+    document.cheese.output.value=item1+item2+item3+item4+item5+item6+item7+item8+item9+item10+item11;
+    }
+    </script>
+      <script src="./js/shop.js"></script>
+    <script>
+         $('.slider').slick({
+    autoplay: true,//自動的に動き出すか。初期値はfalse。
+    infinite: true,//スライドをループさせるかどうか。初期値はtrue。
+    slidesToShow: 3,//スライドを画面に3枚見せる
+    slidesToScroll: 3,//1回のスクロールで3枚の写真を移動して見せる
+    prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
+    nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
+    dots: true,//下部ドットナビゲーションの表示
+    responsive: [
+      {
+      breakpoint: 769,//モニターの横幅が769px以下の見せ方
+      settings: {
+        slidesToShow: 2,//スライドを画面に2枚見せる
+        slidesToScroll: 2,//1回のスクロールで2枚の写真を移動して見せる
+      }
+    },
+    {
+      breakpoint: 426,//モニターの横幅が426px以下の見せ方
+      settings: {
+        slidesToShow: 1,//スライドを画面に1枚見せる
+        slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
+      }
+    }
+  ]
+  });
+
+      </script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/js/6-1-6.js"></script>
+</body>
+</html>

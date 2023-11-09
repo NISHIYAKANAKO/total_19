@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+body,
+html {
+  overflow: hidden;
+  height: 100%;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+#shop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  margin: 20% 5%;
+}
+
+#shop h2 {
+  color: #ffd61a;
+}
+
+.hb {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  z-index: 200;
+  trasnform: scale(0.97);
+}
+.c {
+  position: relative;
+  display: block;
+  max-width: 90%;
+}
+.c img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 200;
+}
+.txt {
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  width: 80%;
+  opacity: 0;
+  padding: 1em 0 0 1em;
+  border-left: 1px solid;
+  z-index: 10;
+  transform: scaleY(1) translateY(-50px);
+  transition: transform 0.2s, opacity 0.5s;
+}
+dl h2 {
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.hb:hover .txt {
+  opacity: 1;
+  transform: scaleY(1) translateY(0);
+}
+.fullBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+  transform: scale(1);
+  z-index: 50;
+}
+.fullBg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.5;
+}
+.hb:hover + .fullBg {
+  opacity: 1;
+  transform: scale(1.02);
+}
+.credits {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 3em;
+  font-size: 0.8em;
+  text-align: right;
+  font-style: italic;
+  opacity: 0.8;
+  transition: opacity 0.2;
+  z-index: 300;
+}
+.credits:hover {
+  text-decoration: underline;
+  opacity: 100;
+}
+
+footer {
+  position: absolute; /*←絶対位置*/
+  width: 100%;
+  bottom: 0; /*下に固定*/
+  z-index: 500;
+}
+/* ーーーーー */
+
+#shop2 h2 {
+  text-align: right;
+  padding-right: 40px;
+}
+
+#shop2 .shop2-text {
+  margin-bottom: 60px;
+}
+
+.shop2-field {
+  position: relative;
+}
+
+.shop2-field img {
+  width: 480px;
+  margin: 100px;
+  position: absolute;
+  top: 100px;
+  left: 250px;
+  z-index: 100;
+}
+
+/* 白背景 */
+#shop2 dl {
+  position: absolute;
+  padding: 0 50px;
+  width: 780px;
+  top: 150px;
+  left: 400px;
+  height: 500px;
+  background-color: #fff;
+}
+/* 商品名 */
+
+.shop2-title {
+  width: 300px;
+  margin: 10px;
+  color: #808080;
+  font-size: 14px;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  left: 400px;
+}
+
+/* 文章 */
+#shop2 dd {
+  width: 260px;
+  font-size: 14px;
+  position: absolute;
+  top: 200px;
+  right: 10px;
+  left: 460px;
+  color: #808080;
+  line-height: 16px;
+}
+
+#shop2 p {
+  padding-top: 50px;
+  font-size: 18px;
+  text-align: right;
+}
+
+/**********アニメーション設定**********/
+
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes LeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes SlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes SlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ScrollAnim {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/**********アニメーション設定end**********/
+
+#shop img {
+  animation-name: SlideDown;
+  animation-duration: 4s;
+}
+.anime-r {
+  animation-name: RightToLeft;
+  animation-duration: 4s;
+}
+
+.anime-l {
+  animation-name: LeftToRight;
+  animation-duration: 4s;
+}
+
+.shop2-field button {
+  width: 200px;
+  margin: 10px;
+  font-size: 14px;
+  /* position: relative; */
+  border-radius: 2px;
+  box-shadow: 0 6px #ffbb1c;
+  top: 550px;
+  right: 10px;
+  left: 890px;
+}
+
+.shop2-field button:hover {
+  background-color: #fffbca;
+  color: #ffbb1c;
+  transform: rotateX(360deg);
+}
+
+#moru {
+  color: #fff;
+  z-index: 1400;
+}
+
